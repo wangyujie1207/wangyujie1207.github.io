@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="Wangyujie">
+  
+  
+  
+  <link rel="prev" href="https://wangyujie1207.github.io/2019/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" />
+  
+  <link rel="canonical" href="https://wangyujie1207.github.io/2019/%E8%AE%B0%E5%BD%95%E4%B8%80%E4%B8%8Bhugo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E7%BB%8F%E5%8E%86/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           记录一下hugo搭建博客的经历 | Wangyujie
+       
+  </title>
+  <meta name="title" content="记录一下hugo搭建博客的经历 | Wangyujie">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/wangyujie1207.github.io"
+    },
+    "articleSection" : "posts",
+    "name" : "记录一下hugo搭建博客的经历",
+    "headline" : "记录一下hugo搭建博客的经历",
+    "description" : "安装hugo, 参考 hugo搭建; mac 安装 homebrew install hugo hugo version  开始搭建博客 找一个文件夹, hugo new site \x26lt;网站名\x26gt;\nhugo new site quickstart  如果需要部署到GitHub, 需要注意一下资源路径 GitHub页面有两种类型  https:\/\/\x26lt;USERNAME|ORGANIZATION\x26gt;.github.io\/ https:\/\/\x26lt;USERNAME|ORGANIZATION\x26gt;.github.io\/\x26lt;PROJECT\x26gt;\/  我用的第一种 hugo new site \x26lt;names\x26gt;.github.io-creator  为网站添加一个主题 cd \x26lt;names\x26gt; git init git submodule add https:\/\/github.com\/budparr\/gohugo-theme-ananke.git themes\/ananke echo \x27theme = \x26quot;ananke\x26quot;\x27 \x26gt;\x26gt; config.toml  新建一篇文章 hugo new posts\/\x26lt;names\x26gt;.md  如需要发布文章，记得把draft: true改为draft: false. 参考 draft\n预览网站 hugo server -D  网站配置文件是config.toml，如可配置语言选项为languageCode = “zh-Hans”,网站名字等",
+    "inLanguage" : "zh-CN",
+    "author" : "Wangyujie",
+    "creator" : "Wangyujie",
+    "publisher": "Wangyujie",
+    "accountablePerson" : "Wangyujie",
+    "copyrightHolder" : "Wangyujie",
+    "copyrightYear" : "2019",
+    "datePublished": "2019-10-26 11:03:42 \x2b0800 CST",
+    "dateModified" : "2019-10-26 11:03:42 \x2b0800 CST",
+    "url" : "https:\/\/wangyujie1207.github.io\/2019\/%E8%AE%B0%E5%BD%95%E4%B8%80%E4%B8%8Bhugo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E7%BB%8F%E5%8E%86\/",
+    "wordCount" : "69",
+    "keywords" : [ "go","golang","templates","themes","development", "Wangyujie"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://wangyujie1207.github.io">Wangyujie</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://wangyujie1207.github.io">Wangyujie</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">记录一下hugo搭建博客的经历</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="https://wangyujie1207.github.io" rel="author">Wangyujie</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2019-10-26 itemprop="datePublished">October 26, 2019</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="https://wangyujie1207.github.io/categories/%E6%97%A5%E5%B8%B8/"> 日常 </a>
+                        
+                </span>
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          
+
+<h1 id="安装hugo-参考-hugo搭建-https-gohugo-io">安装hugo, 参考 <a href="https://gohugo.io/" rel="nofollow noreferrer" target="_blank">hugo搭建</a>;</h1>
+
+<pre><code>mac 安装
+homebrew install hugo
+hugo version
+</code></pre>
+
+<h1 id="开始搭建博客">开始搭建博客</h1>
+
+<p>找一个文件夹, hugo new site &lt;网站名&gt;</p>
+
+<pre><code>hugo new site quickstart
+</code></pre>
+
+<h4 id="如果需要部署到github-需要注意一下资源路径">如果需要部署到GitHub, 需要注意一下资源路径</h4>
+
+<h4 id="github页面有两种类型">GitHub页面有两种类型</h4>
+
+<ul>
+<li><code>https://&lt;USERNAME|ORGANIZATION&gt;.github.io/</code></li>
+<li><code>https://&lt;USERNAME|ORGANIZATION&gt;.github.io/&lt;PROJECT&gt;/</code></li>
+</ul>
+
+<h4 id="我用的第一种">我用的第一种</h4>
+
+<pre><code>hugo new site &lt;names&gt;.github.io-creator
+</code></pre>
+
+<h2 id="为网站添加一个主题">为网站添加一个主题</h2>
+
+<pre><code>cd &lt;names&gt;
+git init
+git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke
+echo 'theme = &quot;ananke&quot;' &gt;&gt; config.toml
+</code></pre>
+
+<h2 id="新建一篇文章">新建一篇文章</h2>
+
+<pre><code>hugo new posts/&lt;names&gt;.md
+</code></pre>
+
+<p>如需要发布文章，记得把draft: true改为draft: false. 参考 <a href="https://gohugo.io/getting-started/usage/#draft-future-and-expired-content" rel="nofollow noreferrer" target="_blank">draft</a></p>
+
+<h2 id="预览网站">预览网站</h2>
+
+<pre><code>hugo server -D
+</code></pre>
+
+<p>网站配置文件是config.toml，如可配置语言选项为languageCode = “zh-Hans”,网站名字等</p>
+
+<h2 id="生成静态文件">生成静态文件</h2>
+
+<ul>
+<li><p>这个就很简单啦, 直接运行hugo命令生成静态网页，放在public目录下</p>
+
+<pre><code>hugo
+</code></pre></li>
+
+<li><p>最后, 提交public到GitHub 然后开启gh-pages即可预览</p></li>
+</ul>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>Wangyujie </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://wangyujie1207.github.io/2019/%E8%AE%B0%E5%BD%95%E4%B8%80%E4%B8%8Bhugo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E7%BB%8F%E5%8E%86/>https://wangyujie1207.github.io/2019/%E8%AE%B0%E5%BD%95%E4%B8%80%E4%B8%8Bhugo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E7%BB%8F%E5%8E%86/</span>
+            </p>
+            
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="https://wangyujie1207.github.io/tags/go/">
+                    #go</a></span>
+            
+            <span class="tag"><a href="https://wangyujie1207.github.io/tags/golang/">
+                    #golang</a></span>
+            
+            <span class="tag"><a href="https://wangyujie1207.github.io/tags/templates/">
+                    #templates</a></span>
+            
+            <span class="tag"><a href="https://wangyujie1207.github.io/tags/themes/">
+                    #themes</a></span>
+            
+            <span class="tag"><a href="https://wangyujie1207.github.io/tags/development/">
+                    #development</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://wangyujie1207.github.io">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://wangyujie1207.github.io/2019/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" class="prev" rel="prev" title="第一篇博客"><i class="iconfont icon-left"></i>&nbsp;第一篇博客</a>
+         
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2017 - 2019</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://wangyujie1207.github.io">Wangyujie</a> | </span> 
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a>  <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow"></a></span> 
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    <script src="/js/vendor_no_gallery.min.js" async=""></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>

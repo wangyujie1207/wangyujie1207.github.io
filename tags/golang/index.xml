@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>golang on Wangyujie</title>
+    <link>https://wangyujie1207.github.io/tags/golang/</link>
+    <description>Recent content in golang on Wangyujie</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sat, 26 Oct 2019 11:03:42 +0800</lastBuildDate>
+    
+	<atom:link href="https://wangyujie1207.github.io/tags/golang/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>记录一下hugo搭建博客的经历</title>
+      <link>https://wangyujie1207.github.io/2019/%E8%AE%B0%E5%BD%95%E4%B8%80%E4%B8%8Bhugo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E7%BB%8F%E5%8E%86/</link>
+      <pubDate>Sat, 26 Oct 2019 11:03:42 +0800</pubDate>
+      
+      <guid>https://wangyujie1207.github.io/2019/%E8%AE%B0%E5%BD%95%E4%B8%80%E4%B8%8Bhugo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E7%BB%8F%E5%8E%86/</guid>
+      <description>安装hugo, 参考 hugo搭建; mac 安装 homebrew install hugo hugo version  开始搭建博客 找一个文件夹, hugo new site &amp;lt;网站名&amp;gt;
+hugo new site quickstart  如果需要部署到GitHub, 需要注意一下资源路径 GitHub页面有两种类型  https://&amp;lt;USERNAME|ORGANIZATION&amp;gt;.github.io/ https://&amp;lt;USERNAME|ORGANIZATION&amp;gt;.github.io/&amp;lt;PROJECT&amp;gt;/  我用的第一种 hugo new site &amp;lt;names&amp;gt;.github.io-creator  为网站添加一个主题 cd &amp;lt;names&amp;gt; git init git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke echo &#39;theme = &amp;quot;ananke&amp;quot;&#39; &amp;gt;&amp;gt; config.toml  新建一篇文章 hugo new posts/&amp;lt;names&amp;gt;.md  如需要发布文章，记得把draft: true改为draft: false. 参考 draft
+预览网站 hugo server -D  网站配置文件是config.toml，如可配置语言选项为languageCode = “zh-Hans”,网站名字等</description>
+    </item>
+    
+  </channel>
+</rss>
