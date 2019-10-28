@@ -30,15 +30,6 @@
     </item>
     
     <item>
-      <title>development</title>
-      <link>https://wangyujie1207.github.io/tags/development/</link>
-      <pubDate>Sat, 26 Oct 2019 11:03:42 +0800</pubDate>
-      
-      <guid>https://wangyujie1207.github.io/tags/development/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>go</title>
       <link>https://wangyujie1207.github.io/tags/go/</link>
       <pubDate>Sat, 26 Oct 2019 11:03:42 +0800</pubDate>
@@ -48,29 +39,11 @@
     </item>
     
     <item>
-      <title>golang</title>
-      <link>https://wangyujie1207.github.io/tags/golang/</link>
+      <title>hugo</title>
+      <link>https://wangyujie1207.github.io/tags/hugo/</link>
       <pubDate>Sat, 26 Oct 2019 11:03:42 +0800</pubDate>
       
-      <guid>https://wangyujie1207.github.io/tags/golang/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>templates</title>
-      <link>https://wangyujie1207.github.io/tags/templates/</link>
-      <pubDate>Sat, 26 Oct 2019 11:03:42 +0800</pubDate>
-      
-      <guid>https://wangyujie1207.github.io/tags/templates/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>themes</title>
-      <link>https://wangyujie1207.github.io/tags/themes/</link>
-      <pubDate>Sat, 26 Oct 2019 11:03:42 +0800</pubDate>
-      
-      <guid>https://wangyujie1207.github.io/tags/themes/</guid>
+      <guid>https://wangyujie1207.github.io/tags/hugo/</guid>
       <description></description>
     </item>
     

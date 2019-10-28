@@ -106,18 +106,6 @@
     </url>
   
     <url>
-      <loc>https://wangyujie1207.github.io/tags/development/</loc>
-      
-      <lastmod>2019-10-26T11:03:42+08:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
       <loc>https://wangyujie1207.github.io/tags/go/</loc>
       
       <lastmod>2019-10-26T11:03:42+08:00</lastmod>
@@ -130,31 +118,7 @@
     </url>
   
     <url>
-      <loc>https://wangyujie1207.github.io/tags/golang/</loc>
-      
-      <lastmod>2019-10-26T11:03:42+08:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://wangyujie1207.github.io/tags/templates/</loc>
-      
-      <lastmod>2019-10-26T11:03:42+08:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://wangyujie1207.github.io/tags/themes/</loc>
+      <loc>https://wangyujie1207.github.io/tags/hugo/</loc>
       
       <lastmod>2019-10-26T11:03:42+08:00</lastmod>
       
