@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="Wangyujie">
+  
+  
+  
+  <link rel="prev" href="https://wangyujie1207.github.io/2019/%E8%AE%B0%E5%BD%95%E4%B8%80%E4%B8%8Bhugo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E7%BB%8F%E5%8E%86/" />
+  
+  <link rel="canonical" href="https://wangyujie1207.github.io/2019/maven%E4%B8%8Ejava%E5%8C%85%E7%9A%84%E5%88%9D%E7%BA%A7%E6%8E%A5%E8%A7%A6/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           Maven与Java包的初级接触 | Wangyujie
+       
+  </title>
+  <meta name="title" content="Maven与Java包的初级接触 | Wangyujie">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/wangyujie1207.github.io"
+    },
+    "articleSection" : "posts",
+    "name" : "Maven与Java包的初级接触",
+    "headline" : "Maven与Java包的初级接触",
+    "description" : " 什么是maven Maven是一个采用纯Java编写的开源项目管理工具, Maven采用了一种被称之为 Project Object Model (POM)概念来管理项目，所有的项目配置信息都被定 义在一个叫做POM.xml的文件中..   Maven主要服务于基于Java平台的项目构建、依赖管理和项目信息管理\x26hellip;  仓库 本地仓库  Maven会把我们项目所构建出来的jar包等等资源存放在本地仓库中。当我们需要jar包的时候，Maven第一时间也是去本地仓库中寻找jar包\n中心仓库 ** 当Maven在本地仓库和私服找不到我们需要的jar包的时候，就去中心仓库中帮我们下载对应的jar包**。那Maven怎么知道去哪里下载呢？？其实Maven已经配置好的了 apache-maven-3.2.1\\lib\\maven-model-builder-3.2.1\\org\\apache\\maven\\model下的POM.xml文件中已经配置好了\n  maven坐标 坐标的组成： groupId \x2b artifactId\x2b version * groupId：组id ,机构名，公司名：好比公司的id，或者是公司包名 alibaba ——-》高德--》5.01版本 * artifactId：构建物id ，产品名或者产品的id * version ：版本号  jar包组成： artifactId-version.jar scope应用范围有test、compile等等，默认是compile，那么test和compile有什么区别呢？\n 间接依赖问题 ：依赖的jar包必须是 compile 范围，假如是test范围，则发布的jar包不会包含test范围依赖的jar包，和依赖关系  \x26lt;scope\x26gt;test\x26lt;\/scope\x26gt;  Java的包管理机制 ##. 什么是包 * JVM的工作被设计得相当简单：\n1. 执行一个类的字节码 2. 假如这个过程中碰到了新的类，加载他   那么去哪里加载他呢？  类路径（Classpath）  什么是类路径：-classpath\/-cp 类的全限定类名（目录层级）唯一确定了一个类 包就是把许多类放在一起打的压缩包  Classpath hell  传递性依赖是指你依赖的类还依赖了别的类 全限定类名是类的唯一标识 当多个同名类同时出现在Classpath中，就是噩梦的开始  什么是包管理  你要使用一些第三方类，就要告诉JVM从哪里找 包管理的实质就是告诉JVM如何找到所需的第三方库以及成功地解决其中地冲突问题  Maven——划时代的包管理工具  约定优于配置（Convention over configuration） 必须强调，Maven远远不止是包管理工具 Maven的包按照约定为所有的包编号，方便检索，groupId\/artifactId\/version 依赖冲突的解决原则：最近的胜出 当你看到如下异常的时候：  * AbstractMethodError * NoClassDefFoundError * ClassNotFoundException * LinkageError   一般就是包冲突了，解决方法：  * 单独声明需要引用的特定包 * 排除掉冲突的包  ",
+    "inLanguage" : "zh-CN",
+    "author" : "Wangyujie",
+    "creator" : "Wangyujie",
+    "publisher": "Wangyujie",
+    "accountablePerson" : "Wangyujie",
+    "copyrightHolder" : "Wangyujie",
+    "copyrightYear" : "2019",
+    "datePublished": "2019-10-28 13:46:32 \x2b0800 CST",
+    "dateModified" : "2019-10-28 13:46:32 \x2b0800 CST",
+    "url" : "https:\/\/wangyujie1207.github.io\/2019\/maven%E4%B8%8Ejava%E5%8C%85%E7%9A%84%E5%88%9D%E7%BA%A7%E6%8E%A5%E8%A7%A6\/",
+    "wordCount" : "84",
+    "keywords" : [ "java","maven", "Wangyujie"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://wangyujie1207.github.io">Wangyujie</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://wangyujie1207.github.io">Wangyujie</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">Maven与Java包的初级接触</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="https://wangyujie1207.github.io" rel="author">Wangyujie</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2019-10-28 itemprop="datePublished">October 28, 2019</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="https://wangyujie1207.github.io/categories/java/"> java </a>
+                        
+                </span>
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          
+
+<h1 id="什么是maven">什么是maven</h1>
+
+<pre><code>Maven是一个采用纯Java编写的开源项目管理工具, Maven采用了一种被称之为
+Project Object Model (POM)概念来管理项目，所有的项目配置信息都被定
+义在一个叫做POM.xml的文件中..
+</code></pre>
+
+<ul>
+<li>Maven主要服务于基于Java平台的项目构建、依赖管理和项目信息管理&hellip;</li>
+</ul>
+
+<h1 id="仓库">仓库</h1>
+
+<h2 id="本地仓库">本地仓库</h2>
+
+<ul>
+<li><p>Maven会把我们项目所构建出来的jar包等等资源存放在本地仓库中。当我们需要jar包的时候，Maven第一时间也是去本地仓库中寻找jar包</p>
+
+<h2 id="中心仓库">中心仓库</h2></li>
+
+<li><p>** 当Maven在本地仓库和私服找不到我们需要的jar包的时候，就去中心仓库中帮我们下载对应的jar包**。那Maven怎么知道去哪里下载呢？？其实Maven已经配置好的了
+apache-maven-3.2.1\lib\maven-model-builder-3.2.1\org\apache\maven\model下的POM.xml文件中已经配置好了</p></li>
+</ul>
+
+<h2 id="maven坐标">maven坐标</h2>
+
+<h4 id="坐标的组成-groupid-artifactid-version">坐标的组成： groupId + artifactId+ version</h4>
+
+<pre><code>* groupId：组id ,机构名，公司名：好比公司的id，或者是公司包名 alibaba ——-》高德--》5.01版本
+* artifactId：构建物id ，产品名或者产品的id
+* version ：版本号
+</code></pre>
+
+<h4 id="jar包组成-artifactid-version-jar">jar包组成： artifactId-version.jar</h4>
+
+<p>scope应用范围有test、compile等等，默认是compile，那么test和compile有什么区别呢？</p>
+
+<ul>
+<li>间接依赖问题 ：依赖的jar包必须是 compile 范围，假如是test范围，则发布的jar包不会包含test范围依赖的jar包，和依赖关系</li>
+</ul>
+
+<pre><code class="language-xml">&lt;scope&gt;test&lt;/scope&gt;
+</code></pre>
+
+<h1 id="java的包管理机制">Java的包管理机制</h1>
+
+<p>##. 什么是包
+* JVM的工作被设计得相当简单：</p>
+
+<pre><code>1. 执行一个类的字节码
+2. 假如这个过程中碰到了新的类，加载他
+</code></pre>
+
+<ul>
+<li>那么去哪里加载他呢？</li>
+</ul>
+
+<h2 id="类路径-classpath">类路径（Classpath）</h2>
+
+<ul>
+<li>什么是类路径：-classpath/-cp</li>
+<li>类的全限定类名（目录层级）唯一确定了一个类</li>
+<li>包就是把许多类放在一起打的压缩包</li>
+</ul>
+
+<h2 id="classpath-hell">Classpath hell</h2>
+
+<ul>
+<li>传递性依赖是指你依赖的类还依赖了别的类</li>
+<li>全限定类名是类的唯一标识</li>
+<li>当多个同名类同时出现在Classpath中，就是噩梦的开始</li>
+</ul>
+
+<h2 id="什么是包管理">什么是包管理</h2>
+
+<ul>
+<li>你要使用一些第三方类，就要告诉JVM从哪里找</li>
+<li>包管理的实质就是告诉JVM如何找到所需的第三方库以及成功地解决其中地冲突问题</li>
+</ul>
+
+<h2 id="maven-划时代的包管理工具">Maven——划时代的包管理工具</h2>
+
+<ul>
+<li>约定优于配置（Convention over configuration）</li>
+<li>必须强调，Maven远远不止是包管理工具</li>
+<li>Maven的包按照约定为所有的包编号，方便检索，groupId/artifactId/version</li>
+<li>依赖冲突的解决原则：最近的胜出</li>
+<li>当你看到如下异常的时候：</li>
+</ul>
+
+<pre><code class="language-markdown">* AbstractMethodError
+* NoClassDefFoundError
+* ClassNotFoundException
+* LinkageError
+</code></pre>
+
+<ul>
+<li>一般就是包冲突了，解决方法：</li>
+</ul>
+
+<pre><code class="language-markdown">* 单独声明需要引用的特定包
+* 排除掉冲突的包
+</code></pre>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>Wangyujie </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://wangyujie1207.github.io/2019/maven%E4%B8%8Ejava%E5%8C%85%E7%9A%84%E5%88%9D%E7%BA%A7%E6%8E%A5%E8%A7%A6/>https://wangyujie1207.github.io/2019/maven%E4%B8%8Ejava%E5%8C%85%E7%9A%84%E5%88%9D%E7%BA%A7%E6%8E%A5%E8%A7%A6/</span>
+            </p>
+            
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="https://wangyujie1207.github.io/tags/java/">
+                    #java</a></span>
+            
+            <span class="tag"><a href="https://wangyujie1207.github.io/tags/maven/">
+                    #maven</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://wangyujie1207.github.io">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://wangyujie1207.github.io/2019/%E8%AE%B0%E5%BD%95%E4%B8%80%E4%B8%8Bhugo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E7%BB%8F%E5%8E%86/" class="prev" rel="prev" title="记录一下hugo搭建博客的经历"><i class="iconfont icon-left"></i>&nbsp;记录一下hugo搭建博客的经历</a>
+         
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2017 - 2019</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://wangyujie1207.github.io">Wangyujie</a> | </span> 
+         
+
+         
+		  <span>Powered by <a rel="external nofollow">Hugo</a>  <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow"></a></span> 
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    <script src="/js/vendor_no_gallery.min.js" async=""></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>

@@ -5,8 +5,122 @@
     <description>Recent content in Wangyujie on Wangyujie</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 26 Oct 2019 14:24:03 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 28 Oct 2019 13:46:32 +0800</lastBuildDate>
     <atom:link href="/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Maven与Java包的初级接触</title>
+      <link>https://wangyujie1207.github.io/2019/maven%E4%B8%8Ejava%E5%8C%85%E7%9A%84%E5%88%9D%E7%BA%A7%E6%8E%A5%E8%A7%A6/</link>
+      <pubDate>Mon, 28 Oct 2019 13:46:32 +0800</pubDate>
+      
+      <guid>https://wangyujie1207.github.io/2019/maven%E4%B8%8Ejava%E5%8C%85%E7%9A%84%E5%88%9D%E7%BA%A7%E6%8E%A5%E8%A7%A6/</guid>
+      <description>
+
+&lt;h1 id=&#34;什么是maven&#34;&gt;什么是maven&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;Maven是一个采用纯Java编写的开源项目管理工具, Maven采用了一种被称之为
+Project Object Model (POM)概念来管理项目，所有的项目配置信息都被定
+义在一个叫做POM.xml的文件中..
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Maven主要服务于基于Java平台的项目构建、依赖管理和项目信息管理&amp;hellip;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;仓库&#34;&gt;仓库&lt;/h1&gt;
+
+&lt;h2 id=&#34;本地仓库&#34;&gt;本地仓库&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Maven会把我们项目所构建出来的jar包等等资源存放在本地仓库中。当我们需要jar包的时候，Maven第一时间也是去本地仓库中寻找jar包&lt;/p&gt;
+
+&lt;h2 id=&#34;中心仓库&#34;&gt;中心仓库&lt;/h2&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;** 当Maven在本地仓库和私服找不到我们需要的jar包的时候，就去中心仓库中帮我们下载对应的jar包**。那Maven怎么知道去哪里下载呢？？其实Maven已经配置好的了
+apache-maven-3.2.1\lib\maven-model-builder-3.2.1\org\apache\maven\model下的POM.xml文件中已经配置好了&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;maven坐标&#34;&gt;maven坐标&lt;/h2&gt;
+
+&lt;h4 id=&#34;坐标的组成-groupid-artifactid-version&#34;&gt;坐标的组成： groupId + artifactId+ version&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;* groupId：组id ,机构名，公司名：好比公司的id，或者是公司包名 alibaba ——-》高德--》5.01版本
+* artifactId：构建物id ，产品名或者产品的id
+* version ：版本号
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;jar包组成-artifactid-version-jar&#34;&gt;jar包组成： artifactId-version.jar&lt;/h4&gt;
+
+&lt;p&gt;scope应用范围有test、compile等等，默认是compile，那么test和compile有什么区别呢？&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;间接依赖问题 ：依赖的jar包必须是 compile 范围，假如是test范围，则发布的jar包不会包含test范围依赖的jar包，和依赖关系&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-xml&#34;&gt;&amp;lt;scope&amp;gt;test&amp;lt;/scope&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;java的包管理机制&#34;&gt;Java的包管理机制&lt;/h1&gt;
+
+&lt;p&gt;##. 什么是包
+* JVM的工作被设计得相当简单：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;1. 执行一个类的字节码
+2. 假如这个过程中碰到了新的类，加载他
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;那么去哪里加载他呢？&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;类路径-classpath&#34;&gt;类路径（Classpath）&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;什么是类路径：-classpath/-cp&lt;/li&gt;
+&lt;li&gt;类的全限定类名（目录层级）唯一确定了一个类&lt;/li&gt;
+&lt;li&gt;包就是把许多类放在一起打的压缩包&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;classpath-hell&#34;&gt;Classpath hell&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;传递性依赖是指你依赖的类还依赖了别的类&lt;/li&gt;
+&lt;li&gt;全限定类名是类的唯一标识&lt;/li&gt;
+&lt;li&gt;当多个同名类同时出现在Classpath中，就是噩梦的开始&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;什么是包管理&#34;&gt;什么是包管理&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;你要使用一些第三方类，就要告诉JVM从哪里找&lt;/li&gt;
+&lt;li&gt;包管理的实质就是告诉JVM如何找到所需的第三方库以及成功地解决其中地冲突问题&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;maven-划时代的包管理工具&#34;&gt;Maven——划时代的包管理工具&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;约定优于配置（Convention over configuration）&lt;/li&gt;
+&lt;li&gt;必须强调，Maven远远不止是包管理工具&lt;/li&gt;
+&lt;li&gt;Maven的包按照约定为所有的包编号，方便检索，groupId/artifactId/version&lt;/li&gt;
+&lt;li&gt;依赖冲突的解决原则：最近的胜出&lt;/li&gt;
+&lt;li&gt;当你看到如下异常的时候：&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-markdown&#34;&gt;* AbstractMethodError
+* NoClassDefFoundError
+* ClassNotFoundException
+* LinkageError
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;一般就是包冲突了，解决方法：&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-markdown&#34;&gt;* 单独声明需要引用的特定包
+* 排除掉冲突的包
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
     
     <item>
       <title>About</title>
@@ -15,6 +129,8 @@
       
       <guid>https://wangyujie1207.github.io/about/</guid>
       <description>&lt;p&gt;关于我&lt;/p&gt;
+
+&lt;p&gt;这是一台木得感情的代码机器&lt;/p&gt;
 </description>
     </item>
     

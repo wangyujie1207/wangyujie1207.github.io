@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Wangyujie</title>
-    <link>https://wangyujie1207.github.io/posts/</link>
-    <description>Recent content in Posts on Wangyujie</description>
+    <title>java on Wangyujie</title>
+    <link>https://wangyujie1207.github.io/categories/java/</link>
+    <description>Recent content in java on Wangyujie</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Mon, 28 Oct 2019 13:46:32 +0800</lastBuildDate>
     
-	<atom:link href="https://wangyujie1207.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://wangyujie1207.github.io/categories/java/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -22,26 +22,6 @@
   maven坐标 坐标的组成： groupId + artifactId+ version * groupId：组id ,机构名，公司名：好比公司的id，或者是公司包名 alibaba ——-》高德--》5.01版本 * artifactId：构建物id ，产品名或者产品的id * version ：版本号  jar包组成： artifactId-version.jar scope应用范围有test、compile等等，默认是compile，那么test和compile有什么区别呢？
  间接依赖问题 ：依赖的jar包必须是 compile 范围，假如是test范围，则发布的jar包不会包含test范围依赖的jar包，和依赖关系  &amp;lt;scope&amp;gt;test&amp;lt;/scope&amp;gt;  Java的包管理机制 ##. 什么是包 * JVM的工作被设计得相当简单：
 1. 执行一个类的字节码 2. 假如这个过程中碰到了新的类，加载他   那么去哪里加载他呢？  类路径（Classpath）  什么是类路径：-classpath/-cp 类的全限定类名（目录层级）唯一确定了一个类 包就是把许多类放在一起打的压缩包  Classpath hell  传递性依赖是指你依赖的类还依赖了别的类 全限定类名是类的唯一标识 当多个同名类同时出现在Classpath中，就是噩梦的开始  什么是包管理  你要使用一些第三方类，就要告诉JVM从哪里找 包管理的实质就是告诉JVM如何找到所需的第三方库以及成功地解决其中地冲突问题  Maven——划时代的包管理工具  约定优于配置（Convention over configuration） 必须强调，Maven远远不止是包管理工具 Maven的包按照约定为所有的包编号，方便检索，groupId/artifactId/version 依赖冲突的解决原则：最近的胜出 当你看到如下异常的时候：  * AbstractMethodError * NoClassDefFoundError * ClassNotFoundException * LinkageError   一般就是包冲突了，解决方法：  * 单独声明需要引用的特定包 * 排除掉冲突的包  </description>
-    </item>
-    
-    <item>
-      <title>记录一下hugo搭建博客的经历</title>
-      <link>https://wangyujie1207.github.io/2019/%E8%AE%B0%E5%BD%95%E4%B8%80%E4%B8%8Bhugo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E7%BB%8F%E5%8E%86/</link>
-      <pubDate>Sat, 26 Oct 2019 11:03:42 +0800</pubDate>
-      
-      <guid>https://wangyujie1207.github.io/2019/%E8%AE%B0%E5%BD%95%E4%B8%80%E4%B8%8Bhugo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E7%BB%8F%E5%8E%86/</guid>
-      <description>安装hugo, 参考 hugo搭建; mac 安装 homebrew install hugo hugo version  开始搭建博客 找一个文件夹, hugo new site &amp;lt;网站名&amp;gt;
-hugo new site quickstart  如果需要部署到GitHub, 需要注意一下资源路径 GitHub页面有两种类型  https://&amp;lt;USERNAME|ORGANIZATION&amp;gt;.github.io/ https://&amp;lt;USERNAME|ORGANIZATION&amp;gt;.github.io/&amp;lt;PROJECT&amp;gt;/  我用的第一种 hugo new site &amp;lt;names&amp;gt;.github.io-creator  为网站添加一个主题 cd &amp;lt;names&amp;gt; git init git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke echo &#39;theme = &amp;quot;ananke&amp;quot;&#39; &amp;gt;&amp;gt; config.toml  新建一篇文章 hugo new posts/&amp;lt;names&amp;gt;.md  如需要发布文章，记得把draft: true改为draft: false. 参考 draft
-预览网站 hugo server -D  网站配置文件是config.toml，如可配置语言选项为languageCode = “zh-Hans”,网站名字等</description>
-    </item>
-    
-    <item>
-      <title>第一篇博客</title>
-      <link>https://wangyujie1207.github.io/2019/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</link>
-      <pubDate>Sat, 26 Oct 2019 09:12:06 +0800</pubDate>
-      
-      <guid>https://wangyujie1207.github.io/2019/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</guid>
-      <description>大家好 这是我第一篇博客, 谢谢大家</description>
     </item>
     
   </channel>
