@@ -6,10 +6,19 @@
     <description>Recent content in Tags on Wangyujie</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 05 Nov 2019 13:24:31 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 19 Feb 2020 20:59:42 +0800</lastBuildDate>
     
 	<atom:link href="https://wangyujie1207.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>html</title>
+      <link>https://wangyujie1207.github.io/tags/html/</link>
+      <pubDate>Wed, 19 Feb 2020 20:59:42 +0800</pubDate>
+      
+      <guid>https://wangyujie1207.github.io/tags/html/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>java</title>
