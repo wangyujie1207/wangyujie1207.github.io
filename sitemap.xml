@@ -2,11 +2,13 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
     <url>
-      <loc>https://wangyujie1207.github.io/2020/html%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE/</loc>
+      <loc>https://wangyujie1207.github.io/categories/</loc>
       
-      <lastmod>2020-02-19T20:59:42+08:00</lastmod>
+      <lastmod>2020-02-20T14:48:39+08:00</lastmod>
       
       
+      
+      <priority>0</priority>
       
       
     </url>
@@ -14,7 +16,7 @@
     <url>
       <loc>https://wangyujie1207.github.io/posts/</loc>
       
-      <lastmod>2020-02-19T20:59:42+08:00</lastmod>
+      <lastmod>2020-02-20T14:48:39+08:00</lastmod>
       
       
       
@@ -26,7 +28,7 @@
     <url>
       <loc>https://wangyujie1207.github.io/tags/</loc>
       
-      <lastmod>2020-02-19T20:59:42+08:00</lastmod>
+      <lastmod>2020-02-20T14:48:39+08:00</lastmod>
       
       
       
@@ -38,11 +40,67 @@
     <url>
       <loc>https://wangyujie1207.github.io/</loc>
       
-      <lastmod>2020-02-19T20:59:42+08:00</lastmod>
+      <lastmod>2020-02-20T14:48:39+08:00</lastmod>
       
       
       
       <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://wangyujie1207.github.io/categories/http/</loc>
+      
+      <lastmod>2020-02-20T14:48:39+08:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://wangyujie1207.github.io/tags/java/</loc>
+      
+      <lastmod>2020-02-20T14:48:39+08:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://wangyujie1207.github.io/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/</loc>
+      
+      <lastmod>2020-02-20T14:48:39+08:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://wangyujie1207.github.io/2020/%E6%B5%85%E6%9E%90url/</loc>
+      
+      <lastmod>2020-02-20T14:48:39+08:00</lastmod>
+      
+      
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://wangyujie1207.github.io/2020/html%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE/</loc>
+      
+      <lastmod>2020-02-19T20:59:42+08:00</lastmod>
+      
+      
       
       
     </url>
@@ -51,18 +109,6 @@
       <loc>https://wangyujie1207.github.io/tags/html/</loc>
       
       <lastmod>2020-02-19T20:59:42+08:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://wangyujie1207.github.io/categories/</loc>
-      
-      <lastmod>2019-11-05T13:24:31+08:00</lastmod>
       
       
       
@@ -83,30 +129,6 @@
   
     <url>
       <loc>https://wangyujie1207.github.io/categories/java/</loc>
-      
-      <lastmod>2019-11-05T13:24:31+08:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://wangyujie1207.github.io/tags/java/</loc>
-      
-      <lastmod>2019-11-05T13:24:31+08:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://wangyujie1207.github.io/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/</loc>
       
       <lastmod>2019-11-05T13:24:31+08:00</lastmod>
       
