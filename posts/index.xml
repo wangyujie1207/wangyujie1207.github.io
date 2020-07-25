@@ -57,6 +57,24 @@ HashMap和HashSet  HashSet  HashSet实现了Set接口，不允许集合中有重
     </item>
     
     <item>
+      <title>express_api</title>
+      <link>https://wangyujie1207.github.io/2019/express_api/</link>
+      <pubDate>Tue, 29 Oct 2019 13:53:28 +0800</pubDate>
+      
+      <guid>https://wangyujie1207.github.io/2019/express_api/</guid>
+      <description>Express API 总结 express.xxx - 内置中间件 json([option]) 内置中间件,解析传入的请求
+app.use(express.json()) app.use((request, response, next) =&amp;gt; { const jsonObj = request.body })  static(root，[option]) 内置中间件为，创建一个静态文件服务器，根据 req.url 来寻找对应的文件
+text([option]) 内置中间件，将传入的请求参数解析为字符串
+Router([option]) 创建一个 router 对象，对路由进行响应
+app.xxx - 应用设置 app.set(name , value) 存储一个变量
+app.use([path, ] callback [, callback]) 使用中间件进行全局的处理 对应的路由进行响应
+router.xxx - 操作路由 router.all(path, [callback, &amp;hellip; ] callback) 与 methods 相同，适配所有的方法
+router.methods(path, fn) get/post/put/delete/update 对应的请求方法进行响应
+router.param(name, callback) 构造一个参数触发器，根据参数出发回调 即使参数在多个路由中匹配，在请求-响应周期中也仅会调用一次参数回调
+router.param(&#39;id&#39;, function (req, res, next, id) { console.</description>
+    </item>
+    
+    <item>
       <title>Maven与Java包的初级接触</title>
       <link>https://wangyujie1207.github.io/2019/maven%E4%B8%8Ejava%E5%8C%85%E7%9A%84%E5%88%9D%E7%BA%A7%E6%8E%A5%E8%A7%A6/</link>
       <pubDate>Mon, 28 Oct 2019 13:46:32 +0800</pubDate>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>js on Wangyujie</title>
+    <link>https://wangyujie1207.github.io/categories/js/</link>
+    <description>Recent content in js on Wangyujie</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Tue, 29 Oct 2019 13:53:28 +0800</lastBuildDate>
+    
+	<atom:link href="https://wangyujie1207.github.io/categories/js/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>express_api</title>
+      <link>https://wangyujie1207.github.io/2019/express_api/</link>
+      <pubDate>Tue, 29 Oct 2019 13:53:28 +0800</pubDate>
+      
+      <guid>https://wangyujie1207.github.io/2019/express_api/</guid>
+      <description>Express API 总结 express.xxx - 内置中间件 json([option]) 内置中间件,解析传入的请求
+app.use(express.json()) app.use((request, response, next) =&amp;gt; { const jsonObj = request.body })  static(root，[option]) 内置中间件为，创建一个静态文件服务器，根据 req.url 来寻找对应的文件
+text([option]) 内置中间件，将传入的请求参数解析为字符串
+Router([option]) 创建一个 router 对象，对路由进行响应
+app.xxx - 应用设置 app.set(name , value) 存储一个变量
+app.use([path, ] callback [, callback]) 使用中间件进行全局的处理 对应的路由进行响应
+router.xxx - 操作路由 router.all(path, [callback, &amp;hellip; ] callback) 与 methods 相同，适配所有的方法
+router.methods(path, fn) get/post/put/delete/update 对应的请求方法进行响应
+router.param(name, callback) 构造一个参数触发器，根据参数出发回调 即使参数在多个路由中匹配，在请求-响应周期中也仅会调用一次参数回调
+router.param(&#39;id&#39;, function (req, res, next, id) { console.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -344,6 +344,114 @@ removeLast() //删除集合中的最后一个元素
     </item>
     
     <item>
+      <title>express_api</title>
+      <link>https://wangyujie1207.github.io/2019/express_api/</link>
+      <pubDate>Tue, 29 Oct 2019 13:53:28 +0800</pubDate>
+      
+      <guid>https://wangyujie1207.github.io/2019/express_api/</guid>
+      <description>
+
+&lt;h2 id=&#34;express-api-总结&#34;&gt;Express API 总结&lt;/h2&gt;
+
+&lt;h3 id=&#34;express-xxx-内置中间件&#34;&gt;express.xxx - 内置中间件&lt;/h3&gt;
+
+&lt;h4 id=&#34;json-option&#34;&gt;json([option])&lt;/h4&gt;
+
+&lt;p&gt;内置中间件,解析传入的请求&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;app.use(express.json())
+app.use((request, response, next) =&amp;gt; {
+    const jsonObj = request.body 
+})
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;static-root-option&#34;&gt;static(root，[option])&lt;/h4&gt;
+
+&lt;p&gt;内置中间件为，创建一个静态文件服务器，根据 req.url 来寻找对应的文件&lt;/p&gt;
+
+&lt;h4 id=&#34;text-option&#34;&gt;text([option])&lt;/h4&gt;
+
+&lt;p&gt;内置中间件，将传入的请求参数解析为字符串&lt;/p&gt;
+
+&lt;h4 id=&#34;router-option&#34;&gt;Router([option])&lt;/h4&gt;
+
+&lt;p&gt;创建一个 router 对象，对路由进行响应&lt;/p&gt;
+
+&lt;h3 id=&#34;app-xxx-应用设置&#34;&gt;app.xxx - 应用设置&lt;/h3&gt;
+
+&lt;h4 id=&#34;app-set-name-value&#34;&gt;app.set(name , value)&lt;/h4&gt;
+
+&lt;p&gt;存储一个变量&lt;/p&gt;
+
+&lt;h4 id=&#34;app-use-path-callback-callback&#34;&gt;app.use([path, ] callback [, callback])&lt;/h4&gt;
+
+&lt;p&gt;使用中间件进行全局的处理
+对应的路由进行响应&lt;/p&gt;
+
+&lt;h3 id=&#34;router-xxx-操作路由&#34;&gt;router.xxx - 操作路由&lt;/h3&gt;
+
+&lt;h4 id=&#34;router-all-path-callback-callback&#34;&gt;router.all(path, [callback, &amp;hellip; ] callback)&lt;/h4&gt;
+
+&lt;p&gt;与 methods 相同，适配所有的方法&lt;/p&gt;
+
+&lt;h4 id=&#34;router-methods-path-fn&#34;&gt;router.methods(path, fn)&lt;/h4&gt;
+
+&lt;p&gt;get/post/put/delete/update 对应的请求方法进行响应&lt;/p&gt;
+
+&lt;h4 id=&#34;router-param-name-callback&#34;&gt;router.param(name, callback)&lt;/h4&gt;
+
+&lt;p&gt;构造一个参数触发器，根据参数出发回调
+即使参数在多个路由中匹配，在请求-响应周期中也仅会调用一次参数回调&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;router.param(&#39;id&#39;, function (req, res, next, id) {
+  console.log(&#39;CALLED ONLY ONCE&#39;)
+  next()
+})
+
+router.get(&#39;/user/:id&#39;, function (req, res, next) {
+  console.log(&#39;although this matches&#39;)
+  next()
+})
+
+router.get(&#39;/user/:id&#39;, function (req, res) {
+  console.log(&#39;and this matches too&#39;)
+  res.end()
+})
+/*print
+CALLED ONLY ONCE
+although this matches
+and this matches too
+*/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;router-use-path-function-funtion&#34;&gt;router.use([path], [function], funtion)&lt;/h4&gt;
+
+&lt;p&gt;中间件的使用或者对路由的响应&lt;/p&gt;
+
+&lt;h4 id=&#34;router-route-path&#34;&gt;router.route(path)&lt;/h4&gt;
+
+&lt;p&gt;返回单个路由的实例，然后您可以使用该路由使用可选的中间件来处理HTTP动词。使用router.route()以避免重复请求的响应&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;router.route(&#39;/users/:user_id&#39;)
+  .all(function (req, res, next) {
+    // runs for all HTTP verbs first
+    // think of it as route specific middleware!
+    next()
+  })
+  .get(function (req, res, next) {
+    res.json(req.user)
+  })
+  .post(function (req, res, next) {
+    next(new Error(&#39;not implemented&#39;))
+  })
+  .delete(function (req, res, next) {
+    next(new Error(&#39;not implemented&#39;))
+  })
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Maven与Java包的初级接触</title>
       <link>https://wangyujie1207.github.io/2019/maven%E4%B8%8Ejava%E5%8C%85%E7%9A%84%E5%88%9D%E7%BA%A7%E6%8E%A5%E8%A7%A6/</link>
       <pubDate>Mon, 28 Oct 2019 13:46:32 +0800</pubDate>
